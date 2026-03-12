@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Gerador de Cartaz - Maiolini</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Gerador de Cartaz</h1>
+
+<div class="painel">
+
+<label>Produto</label>
+<textarea id="produto" rows="2"></textarea>
+
+<label>Descrição</label>
+<input type="text" id="descricao">
+
+<label>Preço</label>
+<input type="text" id="preco">
+
+<label>Unidade</label>
+<input type="text" id="unidade">
+
+<label>Tamanho do Cartaz</label>
+
+<select id="tamanho">
+<option value="A3">A3</option>
+<option value="A4">A4</option>
+<option value="A5">A5</option>
+</select>
+
+<button onclick="imprimir()">Imprimir</button>
+
+</div>
+
+<div class="cartaz">
+
+<div class="produto" id="produtoCartaz"></div>
+
+<div class="descricao" id="descricaoCartaz"></div>
+
+<div class="preco" id="precoCartaz"></div>
+
+<div class="unidade" id="unidadeCartaz"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
