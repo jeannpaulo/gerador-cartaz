@@ -15,6 +15,14 @@
 
 <div class="painel">
 
+<label>Modelo do Cartaz</label>
+
+<select id="modelo" onchange="trocarModelo()">
+<option value="modelo1">Cartaz Geral</option>
+<option value="modelo2">Cartaz Hortifruti</option>
+<option value="modelo3">Cartaz Açougue</option>
+</select>
+
 <label>Produto</label>
 <textarea id="produto" rows="2"></textarea>
 
@@ -35,11 +43,11 @@
 <option value="A5">A5</option>
 </select>
 
-<button onclick="imprimir()">Imprimir</button>
+<button onclick="imprimirCartaz()">Imprimir</button>
 
 </div>
 
-<div class="cartaz">
+<div class="cartaz">   
 
 <div class="produto" id="produtoCartaz"></div>
 
@@ -52,6 +60,9 @@
 </div>
 
 <script src="script.js"></script>
+<script src="cartaz-hortifruti.js"></script>
+<script src="cartaz-acougue.js"></script>
+<script src="impressao.js"></script>
 
 </body>
 </html>

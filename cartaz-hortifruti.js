@@ -1,4 +1,5 @@
-function imprimir() {
+function imprimirPromo(){
+
     let tamanho = document.getElementById("tamanho").value
     let largura = "210mm"
     let altura = "297mm"
@@ -49,7 +50,7 @@ function imprimir() {
         .cartaz {
             width: ${largura};
             height: ${altura};
-            background-image: url("fundo.png");
+            background-image: url("hortifruti.png");
             background-size: 100% 100%;
             background-repeat: no-repeat;
             position: relative;
@@ -102,10 +103,13 @@ function imprimir() {
         .unidade {
             position: absolute;
             top: 73%;
-            right: 12%;
+            right: 10%;
             width: 70%;
             text-align: right;
-            font-size: 4vw;
+            color: white;
+            font-weight: bold;
+            font-size: 5vw;
+            text-transform: uppercase;
         }
 
         @page {
@@ -132,23 +136,4 @@ function imprimir() {
     `)
 
     janela.document.close()
-}
-
-function trocarModelo(){
-
-let modelo = document.getElementById("modelo").value;
-let cartaz = document.querySelector(".cartaz");
-
-if(modelo === "modelo1"){
-    cartaz.style.backgroundImage = "url('fundo.png')";
-}
-
-if(modelo === "modelo2"){
-    cartaz.style.backgroundImage = "url('hortifruti.png')";
-}
-
-if(modelo === "modelo3"){
-    cartaz.style.backgroundImage = "url('acougue1.png')";
-}
-
 }

@@ -5,7 +5,44 @@ text-align:center;
 background:#f2f2f2;
 
 }
+#modelo {
+  /* Remove a aparência padrão do sistema operacional (essencial!) */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 
+  /* Cores e Fundo */
+  background-color: #ffffff;
+  color: #333333;
+
+  /* Espaçamento e Bordas */
+  padding: 10px 15px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+
+  /* Tipografia */
+  font-size: 16px;
+  cursor: pointer;
+
+  /* Largura */
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Efeito ao clicar/focar */
+#modelo:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#modelo {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+  padding-right: 30px; /* Garante que o texto não fique em cima da seta */
+}
 .painel{
 
 background:white;
@@ -38,17 +75,20 @@ height:60px;
 resize:none;
 }
 
-.cartaz{
+.cartaz {
+width: 400px;
+aspect-ratio: 2 / 3;
 
-width:800px;
-height:1100px;
+background-image: url(fundo.png);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 
-margin:auto;
+margin: 30px auto;  /* centraliza */
 
-background-image:url("fundo.png");
-background-size:cover;
+position: relative;
 
-position:relative;
+border: 6px solid #ccc;
 
 }
 
