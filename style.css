@@ -43,15 +43,18 @@ background:#f2f2f2;
   background-size: 15px;
   padding-right: 30px; /* Garante que o texto não fique em cima da seta */
 }
-.painel{
 
+.painel{
+display: flex;
+flex-direction: column;
+gap: 5px;
 background:white;
-padding:20px;
+padding:35px;
 width:300px;
 margin:auto;
 margin-bottom:30px;
 border-radius:10px;
-
+font-weight: 550;
 }
 
 .painel input{
@@ -59,12 +62,51 @@ border-radius:10px;
 width:100%;
 margin-bottom:10px;
 padding:5px;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+  /* Cores e Fundo */
+background-color: #ffffff;
+color: black;
+outline: none;
+border-color: #0056b3;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 
+}
+
+.select{
+  margin-top: 25px;
+  font-size: 16px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+#tamanho{
+  width: 45px;
+  height: 25px;
+  color: #0056b3;
+  border-radius: 5px;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
     font-size: 18px;
     margin: 30px;
+    padding: 12px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button:hover{
+  background-color: #0056b3;
+  color: white;
+  transition: 0.5s;
 }
 
 .painel textarea{
@@ -73,6 +115,16 @@ margin-bottom:10px;
 padding:5px;
 height:60px;
 resize:none;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+  /* Cores e Fundo */
+background-color: #ffffff;
+color: #333333;
+outline: none;
+border-color: #0056b3;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+border-radius: 10px;
 }
 
 .cartaz {
