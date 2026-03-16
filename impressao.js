@@ -2,15 +2,15 @@ function imprimirCartaz(){
 
 let modelo = document.getElementById("modelo").value
 
-if(modelo == "modelo1"){
+if(modelo == "0"){
 imprimir() // usa seu JS atual
 }
 
-if(modelo == "modelo2"){
+if(modelo == "1"){
 imprimirPromo() // outro JS
 }
 
-if(modelo == "modelo3"){
+if(modelo == "2"){
 imprimirAcg() // outro JS
 }
 

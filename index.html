@@ -19,9 +19,9 @@
 <label>Modelo do Cartaz</label>
 
 <select id="modelo" onchange="trocarModelo()">
-<option value="modelo1">Cartaz Geral</option>
-<option value="modelo2">Cartaz Hortifruti</option>
-<option value="modelo3">Cartaz Açougue</option>
+<option value="0">Cartaz Geral</option>
+<option value="1">Cartaz Hortifruti</option>
+<option value="2">Cartaz Açougue</option>
 </select>
 
 <label>Produto</label>
@@ -34,7 +34,7 @@
 <input type="text" id="preco" placeholder="Exemplo: 11,00">
 
 <label>Unidade</label>
-<input type="text" id="unidade" placeholder="Unidade">
+<input type="text" id="unidade" placeholder="Exemplo: Unidade ou Kg">
 
 <div class="select">
 <label>Tamanho do Cartaz</label>
@@ -50,18 +50,41 @@
 
 </div>
 
-<div class="cartaz">   
+<div class="slider-container">
+    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+    
+    <div class="cartaz-slider" id="cartazSlider">
+        <div class="slide active" data-index="0">
+            <div class="cartaz" style="background-image: url(fundo.png);">
+                <div class="produto"></div>
+                <div class="descricao"></div>
+                <div class="preco"></div>
+                <div class="unidade"></div>
+            </div>
+        </div>
+        <div class="slide" data-index="1">
+            <div class="cartaz" style="background-image: url(hortifruti.png);">
+                <div class="produto"></div>
+                <div class="descricao"></div>
+                <div class="preco"></div>
+                <div class="unidade"></div>
+            </div>
+        </div>
+        <div class="slide" data-index="2">
+            <div class="cartaz" style="background-image: url(acougue1.png);">
+                <div class="produto"></div>
+                <div class="descricao"></div>
+                <div class="preco"></div>
+                <div class="unidade"></div>
+            </div>
+        </div>
+    </div>
 
-<div class="produto" id="produtoCartaz"></div>
-
-<div class="descricao" id="descricaoCartaz"></div>
-
-<div class="preco" id="precoCartaz"></div>
-
-<div class="unidade" id="unidadeCartaz"></div>
-
+    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
 </div>
 </div>
+
+
 <h2>Gerador de Cartazes • Maiolini Supermercados<br>
 Desenvolvido por Jean Paulo • Maiolini Soluções Tecnologicas • Since 2026</h2>
 <script src="script.js"></script>

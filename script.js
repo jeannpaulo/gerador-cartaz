@@ -139,16 +139,48 @@ function trocarModelo(){
 let modelo = document.getElementById("modelo").value;
 let cartaz = document.querySelector(".cartaz");
 
-if(modelo === "modelo1"){
+if(modelo === "0"){
     cartaz.style.backgroundImage = "url('fundo.png')";
 }
 
-if(modelo === "modelo2"){
+if(modelo === "1"){
     cartaz.style.backgroundImage = "url('hortifruti.png')";
 }
 
-if(modelo === "modelo3"){
+if(modelo === "2"){
     cartaz.style.backgroundImage = "url('acougue1.png')";
 }
 
+}
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const selectModelo = document.getElementById('modelo');
+
+function mostrarSlide(index) {
+    // Valida os limites do index
+    if (index >= slides.length) currentSlide = 0;
+    else if (index < 0) currentSlide = slides.length - 1;
+    else currentSlide = index;
+
+    // Remove classe active de todos e adiciona no atual
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[currentSlide].classList.add('active');
+
+    // Sincroniza o Select (o valor do select deve ser o index 0, 1, 2...)
+    selectModelo.value = currentSlide;
+    
+    // Chama sua função original de troca de lógica (se houver)
+    // trocarModelo(); 
+}
+
+// Chamada pelas setas
+function mudarSlide(direcao) {
+    mostrarSlide(currentSlide + direcao);
+}
+
+// Chamada pelo Select
+function sincronizarSlider() {
+    const paimelValue = parseInt(selectModelo.value);
+    mostrarSlide(paimelValue);
 }
