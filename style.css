@@ -55,6 +55,10 @@ h1 {
     box-sizing: border-box; /* Garante que o padding não estoure a largura */
 }
 
+#modelo {
+  cursor: pointer;
+}
+
 .painel input:focus, 
 .painel textarea:focus {
     outline: none;
@@ -68,7 +72,7 @@ h1 {
     align-items: center;
     gap: 15px;
     background: #e9ecef;
-    padding: 20px;
+    padding: 42px;
     border-radius: 15px;
 }
 
