@@ -92,11 +92,12 @@ function imprimirPromo(){
             position: absolute;
             top: 55%;
             width: 100%;
+            font-family: 'Anton', sans-serif;
             text-align: center;
             font-size: 19vw;
             font-weight: bold;
             color: red;
-            letter-spacing: -1vw;
+            letter-spacing: 1vw;
         }
 
         /* UNIDADE */
