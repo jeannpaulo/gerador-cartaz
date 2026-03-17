@@ -44,6 +44,27 @@ h1 {
     margin-bottom: -8px;
 }
 
+#modelo{
+    appearance: none; /* Remove estilo padrão do Windows/Chrome/Safari */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+#modelo:hover {
+    border-color: #007bff;
+}
+
+#modelo:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
 .painel input, 
 .painel textarea, 
 #modelo {
@@ -55,8 +76,11 @@ h1 {
     box-sizing: border-box; /* Garante que o padding não estoure a largura */
 }
 
-#modelo {
-  cursor: pointer;
+/* Ajuste para garantir que as opções (options) fiquem legíveis */
+#modelo option {
+    padding: 10px;
+    background-color: white;
+    color: #333;
 }
 
 .painel input:focus, 
